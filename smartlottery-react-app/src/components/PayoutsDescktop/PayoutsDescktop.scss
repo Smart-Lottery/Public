@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.payouts-desctop {
+  display: flex;
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #000000;
+  }
+
+  &__match {
+    display: flex;
+    border-bottom: 1px solid #000000;
+  }
+ &__match-row-jackpot {
+ margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+ }
+ 
+  &__match-row-left {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    gap: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-right: 1px solid #000000;
+
+    @include onDesign {
+      width: 370px;
+      gap: 8px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &__match-row-center {
+    box-sizing: border-box;
+    width: 170px;
+    padding: 11px;
+    border-right: 1px solid #000000;
+    font-size: 18px;
+
+    @include onDesign {
+      width: 254px;
+      padding: 15px;
+      font-size: 27px;
+    }
+  }
+
+  &__match-row-right {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 193px;
+    padding: 13px;
+    font-size: 18px;
+
+    @include onDesign {
+      width: 280px;
+      padding: 15px;
+      font-size: 27px;
+    }
+  }
+  &__match-row-right span {
+    font-size: 16px;
+
+    @include onDesign {
+      font-size: 34px;
+    }
+  }
+
+  &__match-row-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 5px;
+  }
+
+
+  &__match-item {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 27px;
+    background-color: rgba(255, 138, 243, 0.88);
+    border-radius: 50%;
+
+    @include onDesign {
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+  &__match-item-last::before {
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    bottom: -7px;
+  }
+
+  &__match-item-hiden {
+    display: block;
+    width: 27px;
+    height: 27px;
+    background-color: #faf8f7;
+
+    @include onDesign {
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+  &__match-item-plas {
+    display: block;
+    font-size: 18px;
+
+    @include onDesign {
+      font-size: 27px;
+    }
+  }
+
+  &__match-item-plas-hiden {
+    color: #faf8f7;
+  }
+}

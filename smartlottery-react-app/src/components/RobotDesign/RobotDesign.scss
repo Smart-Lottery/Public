@@ -1,0 +1,515 @@
+$pulse_interval:  18s;
+
+.robot-design {
+  display: block;
+
+  &__container {
+    position: relative;
+    width: 1342px;
+    height: 722px;
+  }
+
+  &__text {
+    position: absolute;
+    max-width: 525px;
+    top: 325px;
+    right: -95px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 35px;
+    color: #000000;
+  }
+
+  &__text p {
+    margin-bottom: 35px;
+  }
+
+  &__element-1 {
+    position: absolute;
+    right: 73px;
+    top: 192px;
+    z-index: 5;
+    opacity: 0;
+    animation: pulse #{$pulse_interval} infinite;
+  }
+
+  &__element-2 {
+    position: absolute;
+    right: 73px;
+    top: 192px;
+  }
+  &__element-3 {
+    position: absolute;
+    right: 100px;
+    top: 195px;
+  }
+
+  &__element-4 {
+    position: absolute;
+    right: 150px;
+    top: 250px;
+  }
+
+  &__element-4-1 {
+    position: absolute;
+    right: 152px;
+    top: 255px;
+  }
+
+  &__element-4-2 {
+    position: absolute;
+    right: 152px;
+    top: 255px;
+    opacity: 0;
+    animation: pulse2 #{$pulse_interval} infinite;
+  }
+
+  &__element-4-3 {
+    position: absolute;
+    right: 152px;
+    top: 255px;
+  }
+
+  &__element-5 {
+    position: absolute;
+    right: 185px;
+    top: 252px;
+  }
+
+  &__element-5-1 {
+    position: absolute;
+    right: 187px;
+    top: 253px;
+  }
+
+  &__element-5-2 {
+    position: absolute;
+    right: 187px;
+    top: 253px;
+    opacity: 0;
+    animation: pulse2 #{$pulse_interval} infinite;
+  }
+
+  &__element-5-3 {
+    position: absolute;
+    right: 190px;
+    top: 257px;
+  }
+
+  &__element-6 {
+    position: absolute;
+    right: 300px;
+    top: 205px;
+  }
+
+  &__element-6-1 {
+    position: absolute;
+    right: 300px;
+    top: 205px;
+    opacity: 0;
+    animation: pulse3 #{$pulse_interval} infinite;
+  }
+
+  &__element-7 {
+    position: absolute;
+    right: 465px;
+    top: 214px;
+
+    opacity: 0;
+    animation: pulse4 #{$pulse_interval} infinite;
+  }
+
+  &__element-8 {
+    position: absolute;
+    right: 466px;
+    top: 296px;
+
+    opacity: 0;
+    animation: pulse5 #{$pulse_interval} infinite;
+  }
+
+  &__element-9 {
+    position: absolute;
+    right: 464px;
+    top: 385px;
+
+    opacity: 0;
+    animation: pulse6 #{$pulse_interval} infinite;
+  }
+
+  &__element-10 {
+    position: absolute;
+    right: 464px;
+    top: 550px;
+
+    opacity: 0;
+    animation: pulse7 #{$pulse_interval} infinite;
+  }
+
+  &__element-11 {
+    position: absolute;
+    right: 520px;
+    top: 625px;
+    opacity: 0;
+    animation: pulse8 #{$pulse_interval} infinite;
+  }
+
+  &__element-12 {
+    position: absolute;
+    right: 670px;
+    top: 580px;
+    opacity: 0;
+    animation: pulse9 #{$pulse_interval} infinite;
+  }
+
+  &__element-13 {
+    position: absolute;
+    right: 650px;
+    top: 480px;
+    transform: rotate(-45deg);
+    animation: pulse10 #{$pulse_interval} infinite;
+  }
+
+  &__element-14 {
+    position: absolute;
+    right: 775px;
+    top: 565px;
+
+    opacity: 0;
+    animation: pulse11 #{$pulse_interval} infinite;
+  }
+
+  &__element-15 {
+    position: absolute;
+    right: 1015px;
+    top: 570px;
+    opacity: 0;
+    animation: pulse12 #{$pulse_interval} infinite;
+  }
+
+  &__element-15-1 {
+    position: absolute;
+    right: 1020px;
+    top: 575px;
+  }
+
+  &__element-16 {
+    position: absolute;
+    right: 1150px;
+    top: 570px;
+  }
+
+  &__element-16-1 {
+    position: absolute;
+    right: 1150px;
+    top: 570px;
+    opacity: 0;
+    animation: pulse13 #{$pulse_interval} infinite;
+  }
+
+  &__element-17 {
+    position: absolute;
+    right: 1165px;
+    top: 460px;
+    opacity: 0;
+    animation: pulse14 #{$pulse_interval} infinite;
+  }
+
+  &__element-18 {
+    position: absolute;
+    right: 1075px;
+    top: 380px;
+    opacity: 0;
+    animation: pulse15 #{$pulse_interval} infinite;
+  }
+
+  &__element-19 {
+    position: absolute;
+    right: 1030px;
+    top: 380px;
+    opacity: 0;
+    animation: pulse15 #{$pulse_interval} infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 1;
+    }
+    3% {
+      opacity: 0;
+    }
+    4% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse2 {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 0;
+    }
+    6% {
+      opacity: 1;
+    }
+    7% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse3 {
+    0% {
+      opacity: 0;
+    }
+    7% {
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    9% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse4 {
+    0% {
+      opacity: 0;
+    }
+    9% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    11% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse5 {
+    0% {
+      opacity: 0;
+    }
+    11% {
+      opacity: 0;
+    }
+    12% {
+      opacity: 1;
+    }
+    13% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse6 {
+    0% {
+      opacity: 0;
+    }
+    13% {
+      opacity: 0;
+    }
+    14% {
+      opacity: 1;
+    }
+    15% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse7 {
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 0;
+    }
+    16% {
+      opacity: 1;
+    }
+    17% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse8 {
+    0% {
+      opacity: 0;
+    }
+    17% {
+      opacity: 0;
+    }
+    18% {
+      opacity: 1;
+    }
+    19% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse9 {
+    0% {
+      opacity: 0;
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    21% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse10 {
+    0% {
+      transform: rotate(0);
+    }
+    19% {
+      transform: rotate(0);
+    }
+    20% {
+      transform: rotate(45deg);
+    }
+    21% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes pulse11 {
+    0% {
+      opacity: 0;
+    }
+    21% {
+      opacity: 0;
+    }
+    22% {
+      opacity: 1;
+    }
+    23% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse12 {
+    0% {
+      opacity: 0;
+    }
+    23% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse13 {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+  26% {
+      opacity: 1;
+    }
+    27% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes pulse14 {
+  0% {
+    opacity: 0;
+  }
+ 27% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  29% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse15 {
+  0% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  31% {
+    opacity: 0;
+  }
+  32% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

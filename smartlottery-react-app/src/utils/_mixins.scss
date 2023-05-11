@@ -1,0 +1,13 @@
+@mixin onDesktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @mixin onDesign {
+    @media (min-width: 1505px) {
+      @content;
+    }
+  }
+  
+  

@@ -1,0 +1,352 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.partners-list {
+  position: relative;
+  margin-top: 120px;
+  padding-bottom: 80px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+
+  @include onDesktop {
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../../assets/images/bottom_governase.svg);
+    background-repeat: no-repeat;
+    width: 41px;
+    height: 21px;
+    right: 50%;
+    top: 98%;
+    transform: translateX(50%);
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @include onDesktop {
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("../../assets/images/title_line_bottom.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 158px;
+      height: 16px;
+      top: 98%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @include onDesign {
+      width: 245px;
+      height: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+    @include onDesktop {
+      border-bottom: 1px solid #000;
+      padding-left: 130px;
+      padding-right: 130px;
+      padding-bottom: 50px;
+      margin-top: 50px;
+    }
+  }
+
+  &__item-buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__item::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../../assets/images/Group77.svg);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 40px;
+    right: -15px;
+    bottom: -30px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__item:last-child::after {
+    display: none;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+
+    @include onDesktop {
+      font-size: 19px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+
+    @include onDesign {
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+
+  &__link {
+    display: block;
+    background-color:initial;
+    text-align: left;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+
+  &__title-main {
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+
+    @include onDesktop {
+      text-align: left;
+      margin-bottom: 15px;
+      font-size: 27px;
+      line-height: 33px;
+      padding-left: 130px;
+      padding-right: 530px;
+    }
+
+    @include onDesign {
+      font-size: 37px;
+      line-height: 42px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      margin-bottom: 15px;
+      font-size: 21px;
+      line-height: 24px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      line-height: 32px;
+    }
+  }
+  &__container-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-self:center;
+      gap: 30px;
+    }
+    @include onDesign {
+      gap: 40px;
+    }
+  }
+  
+  &__input {
+    width: 160px;
+    height: 40px;
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    border: none;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      box-sizing: border-box;
+      width: 230px;
+      height: 40px;
+      font-size: 24px;
+      text-align: left;
+      padding-left: 10px;
+      margin-bottom: 0;
+    }
+
+    @include onDesign {
+      width: 277px;
+      height: 55px;
+      padding-left: 20px;
+      font-size: 28px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 44px;
+    font-size: 16px;
+    color: #000;
+    text-transform: uppercase;
+    background: #66f777;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+
+    @include onDesktop {
+      width: 370px;
+      height: 44px;
+      font-size: 21px;
+      border-radius: 26px;
+    }
+
+    @include onDesign {
+      width: 410px;
+      height: 56px;
+      font-size: 27px;
+      border-radius: 28px;
+    }
+  }
+
+  &__title-step {
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 21px;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+
+    @include onDesign {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__item-step h4 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include onDesktop {
+      margin-bottom: 15px;
+      font-size: 15px;
+      line-height: 24px;
+      text-transform: capitalize;
+    }
+
+    @include onDesign {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  &__code {
+    background-color: #888585;
+    padding: 10px 20px;
+  }
+
+  pre code {
+    white-space: pre-wrap;
+
+    display: block;
+    background: #888585;
+    color: #f0f0f0;
+    font-family: Menlo, Monaco, Consolas, monospace;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .hljs-meta .hljs-string,
+  .hljs-regexp,
+  .hljs-string {
+    color: #66f777;
+  }
+
+  .hljs-keyword {
+    color: #ffc36a;
+  }
+  .hljs-comment {
+    color: #000;
+  }
+
+  pre code.hljs {
+    padding: 5px;
+  }
+  .hljs-title,
+  .hljs-title.class_,
+  .hljs-title.class_.inherited__,
+  .hljs-title.function_ {
+    color: #55e9fd;
+  }
+
+  .hljs-attr,
+  .hljs-attribute,
+  .hljs-literal,
+  .hljs-meta,
+  .hljs-number,
+  .hljs-operator,
+  .hljs-selector-attr,
+  .hljs-selector-class,
+  .hljs-selector-id,
+  .hljs-variable {
+    color: #ffc36a;
+  }
+}

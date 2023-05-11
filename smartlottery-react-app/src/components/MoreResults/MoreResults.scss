@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.more-result {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  @include onDesktop {
+    padding-top: 45px;
+    border-top: 1px solid #000;
+  }
+
+  &__search-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include onDesktop {
+      padding-bottom: 20px;
+      width: 100%;
+      border-bottom: 1px solid #000;
+    }
+
+    @include onDesign {
+      padding-bottom: 55px;
+    }
+  }
+
+  &__search-data-item {
+    @include onDesktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    @include onDesign {
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    text-align: center;
+
+    @include onDesktop {
+      text-align: right;
+
+      font-size: 18px;
+      word-wrap: break-word;
+      text-transform: capitalize;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+    }
+  }
+
+  &__title-round {
+    font-size: 15px;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    text-align: center;
+
+    @include onDesktop {
+      text-align: right;
+
+      font-size: 18px;
+      word-wrap: break-word;
+      text-transform: capitalize;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+    }
+
+  }
+
+  &__title-search {
+    font-size: 15px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+
+    @include onDesktop {
+      display: block;
+      font-size: 14px;
+      white-space: nowrap;
+      text-align: right;
+      width: 90px;
+    }
+
+    @include onDesign {
+      font-size: 21px;
+      width: 150px;
+    }
+  }
+
+  &__title::before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 239px;
+    height: 12px;
+    background-image: url(../../assets/images/Vector_phone.svg);
+    // margin-top: 25px;
+    left: 35px;
+    bottom: 10px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__title-main {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__title-after::before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 239px;
+    height: 12px;
+    background-image: url(../../assets/images/Vector_phone.svg);
+    margin-top: 15px;
+    left: 0;
+    bottom: 10px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__button-search {
+    box-sizing: border-box;
+    width: 153px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    background: #66f777;
+    border-radius: 17px;
+    text-align: center;
+    border: none;
+
+    @include onDesktop {
+      font-size: 17px;
+      width: 170px;
+      height: 38px;
+      border-radius: 18px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      width: 253px;
+      height: 56px;
+      border-radius: 28px;
+    }
+  }
+
+  &__results-container {
+    @include onDesktop {
+      margin-top: 30px;
+    }
+
+    @include onDesign {
+      margin-top: 55px;
+    }
+  }
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    // margin-bottom: 25px;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 60px;
+
+      // margin-bottom: 35px;
+      // margin-top: 72px;
+      gap: 36px;
+    }
+    @include onDesign {
+      margin-right: 100px;
+    }
+  }
+
+  &__results h3 {
+    @include onDesktop {
+      // margin-bottom: 35px;
+      // text-align: center;
+    }
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+
+    @include onDesktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__result-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 50%;
+
+    @include onDesktop {
+      width: 41px;
+      height: 41px;
+      font-size: 17px;
+    }
+
+    @include onDesign {
+      width: 64px;
+      height: 64px;
+      font-size: 27px;
+    }
+  }
+
+  &__result-item:last-child {
+    position: relative;
+    background: #ffcbfa;
+  }
+
+  &__result-item:last-child::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    bottom: -5px;
+
+    @include onDesktop {
+      width: 30px;
+      bottom: -9px;
+    }
+
+    @include onDesign {
+      width: 40px;
+      bottom: -9px;
+    }
+  }
+
+  &__tail-spin {
+    display: flex;
+    justify-content: center;
+
+  }
+}
+
+.react-datepicker__month-container .react-datepicker__day {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.react-datepicker__month-container .react-datepicker__day-name {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+  font-size: 14px;
+}
+.react-datepicker__month-container .react-datepicker__current-month {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+}
+
+.react-datepicker__input-container input {
+  box-sizing: border-box;
+  background-color: #fff;
+  height: 43px;
+  width: 265px;
+  padding-left: 56px;
+  font-size: 15px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+
+  @include onDesktop {
+    height: 54px;
+    width: 303px;
+    font-size: 21px;
+  }
+}
+
+.react-datepicker__input-container {
+  position: relative;
+}
+
+.react-datepicker__input-container::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(../../assets/images/Data.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 29px;
+  height: 20px;
+  bottom: 10px;
+  left: 10px;
+
+  @include onDesktop {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  @include onDesign {
+    width: 29px;
+    height: 20px;
+  }
+
+}
+
+.react-datepicker__day--selected {
+  background-color: #66f777 !important;
+}

@@ -1,0 +1,82 @@
+{
+  "name": "cryptolottery-react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
+    "@rooks/use-outside-click": "^4.11.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@walletconnect/ethereum-provider": "^2.7.0",
+    "@walletconnect/sign-client": "^2.4.6",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "@walletconnect/web3wallet": "^1.5.1",
+    "@web3-react/core": "^6.1.9",
+    "@web3modal/ethereum": "^2.2.2",
+    "@web3modal/react": "^2.2.2",
+    "@web3modal/standalone": "^2.3.3",
+    "assert": "^2.0.0",
+    "axios": "^1.3.4",
+    "caip-api": "^1.4.6",
+    "classnames": "^2.3.2",
+    "ethers": "^5.7.2",
+    "ethers-to-web3": "^0.1.6",
+    "firebase": "^9.19.1",
+    "highlight.js": "^11.7.0",
+    "http-browserify": "^1.7.0",
+    "nice-react-ticker": "^2.1.0",
+    "react": "^18.2.0",
+    "react-datepicker": "^4.10.0",
+    "react-dom": "^18.2.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-native-text-ticker": "^1.14.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "^5.0.1",
+    "react-ticker": "^1.3.2",
+    "redux": "^4.2.1",
+    "sass": "^1.59.3",
+    "serve": "^14.2.0",
+    "url": "^0.11.0",
+    "wagmi": "^0.12.10",
+    "web-vitals": "^2.1.4",
+    "web3": "^1.9.0"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "_comment1": "for deploy on Heroku use another start script -- serve -s build, for local use react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^5.9.0",
+    "buffer": "^6.0.3",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0"
+  }
+}

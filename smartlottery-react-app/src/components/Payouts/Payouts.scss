@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+.payouts {
+  max-width: 100%;
+  margin-top: 17px;
+  margin-bottom: 39px;
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #000000;
+  }
+
+  &__match {
+    display: flex;
+    border-bottom: 2px solid #000000;
+  }
+
+  &__match-row-left-head {
+    box-sizing: border-box;
+    width: 136px;
+    border-right: 1px solid #000000;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &__match-row-right-head {
+    padding-left: 9px;
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &__match-row-right-jackpot {
+    padding-left: 9px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__match-row-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding-right: 8px;
+    border-right: 1px solid #000000;
+  }
+
+  &__match-row-right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-size: 15px;
+  }
+
+  &__match-row-right-top {
+    padding-left: 9px;
+    padding-top: 26px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__match-row-right-bottom {
+    padding-left: 9px;
+    padding-top: 6px;
+    padding-bottom: 15px;
+  }
+
+  &__match-item {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255, 138, 243, 0.88);
+    border-radius: 50%;
+  }
+
+  &__match-item-last::before {
+    position: absolute;
+    display: flex;
+    content: "";
+    height: 2px;
+    background-color: #000000;
+    bottom: -7px;
+  }
+
+  &__match-item-hiden {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: initial;
+  }
+
+  &__match-item-plas {
+    display: block;
+    font-size: 15px;
+  }
+
+  &__match-item-plas-hiden {
+    opacity: 0;
+  }
+
+
+}

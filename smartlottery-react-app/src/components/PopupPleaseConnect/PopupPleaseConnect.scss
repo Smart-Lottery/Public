@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.popup-connect {
+  position: fixed;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2ebe9;
+  z-index: 80;
+  box-sizing: border-box;
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 33px;
+  text-align: center;
+  color: #1d1d1b;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 30px 50px;
+
+  @include onDesktop {
+    justify-content: space-between;
+    background-color: #faf8f7;
+    width: 100%;
+    height: 80vh;
+    top: 90px;
+  }
+  @include onDesign {
+    padding: 50px;
+    top: 160px;
+    height: 70vh;
+  }
+
+  
+
+  &__logo {
+    width: 290px;
+    height: 149px;
+    margin-bottom: 75px;
+
+    @include onDesktop {
+      margin-bottom: 0;
+    }
+
+    @include onDesign {
+      width: 430px;
+      height: 220px;
+
+    }
+  }
+
+  &__logo-poligon {
+    position: relative;
+    width: 143px;
+    height: 24px;
+    top: -95px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+  &__text {
+    @include onDesktop {
+       position: relative;
+    }
+  }
+
+  &__text::after {
+    display: none;
+    position: absolute;
+    content: "" ;
+    background-image: url(../../assets/images/popup_connect_vector.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      display: block;
+      width: 120px;
+      height: 222px;
+      top: -100%;
+      left: -150px;
+    }
+
+    @include onDesign {
+      width: 176px;
+      height: 330px;
+    }
+
+  }
+
+  &__text-item {
+    position: relative;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 52px;
+
+    font-size: 19px;
+    line-height: 24px;
+
+    @include onDesktop {
+      margin-bottom:0;
+      max-width: 525px;
+
+    }
+    @include onDesign {
+      max-width: 785px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__text-item::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 22px;
+    background-color: #000000;
+    left: 50%;
+    bottom: -35px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+  &__link {
+    color: #1d1d1b;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 685px;
+    right: 50%;
+    width: 154px;
+    height: 34px;
+    font-size: 17px;
+    background-color: #66f777;
+    border-radius: 17px;
+    text-decoration: none;
+    color: #000;
+    border: none;
+    cursor: pointer;
+
+    @include onDesktop {
+      font-size: 17px;
+      width: 170px;
+      height: 38px;
+      border-radius: 18px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      width: 253px;
+      height: 56px;
+      border-radius: 28px;
+    }
+  }
+}

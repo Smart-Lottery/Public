@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("./assets/fonts/Bender.woff") format("woff");
+}
+
+@import "./utils/_reset.scss";
+@import "./utils/_mixins.scss";
+
+#root {
+  background: #F2EBE9;
+  margin: auto;
+  min-height: 100vh;
+
+}
+
+body {
+  background: #F2EBE9;
+}
+
+main {
+  background: #F2EBE9;
+  margin: auto;
+  max-width: 1700px;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, "PT Sans", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+.page_launch-app {
+  margin: auto;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+
+  @include onDesktop {
+     padding-left:20px;
+    padding-right: 20px;
+   
+  }
+
+  @include onDesign {
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+  }
+}
+
+.page {
+  margin: auto;
+  padding-left: 47px;
+  padding-right: 47px;
+
+  @include onDesktop {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include onDesign {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.phone-hiden {
+  display: none;
+
+  @include onDesktop {
+    display: flex;
+  }
+}
+
+.page__header-phone{
+  @include onDesktop {
+    display: none;
+  }
+}
+
+
+.page__robot-design {
+  display: none;
+
+  @include onDesign {
+    display: block;
+  }
+}
+
+.page__robot-desktop {
+  display: none;
+
+  @include onDesktop {
+    display: block;
+    // padding-left: 10px;
+  }
+  @include onDesign {
+    display: none;
+  }
+}

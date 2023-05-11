@@ -1,0 +1,271 @@
+@font-face {
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+  }
+  
+  @import "../../utils/mixins";
+  @import "../../utils/reset";
+  
+
+.my-entries {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    color: #000000;
+    padding-bottom: 40px;
+
+  
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-sizing: border-box;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #000;
+      margin-left: 170px;
+      padding-top: 35px;
+      margin-bottom: 80px;
+      padding-right: 110px;
+
+    }
+  
+    @include onDesign {
+      margin-left: 230px;
+      padding-right: 150px;
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url(../../assets/images/bottom_governase.svg);
+        background-repeat: no-repeat;
+        width: 41px;
+        height: 21px;
+        right: 50%;
+        top: 98%;
+        transform: translateX(50%);
+    
+        @include onDesktop {
+          display: none;
+        }
+      }
+
+      &::before {
+        display: none;
+    
+        @include onDesktop {
+          position: absolute;
+          display: block;
+          content: "";
+          background-image: url("../../assets/images/title_line_bottom.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 158px;
+          height: 16px;
+          bottom: -60px;
+          right: 50%;
+          transform: translateX(50%);
+        }
+    
+        @include onDesign {
+          width: 245px;
+          height: 24px;
+        }
+      }
+
+      &__container {
+        @include onDesktop {
+            padding-top: 20px;
+           width: 400px;
+        }
+
+        @include onDesign {
+          width: 600px;
+        }
+      }
+
+    &__title {
+      font-size: 17px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      text-align: center;
+      color: #1d1d1b;
+      display: none;
+
+    @include onDesktop {
+        display: block;
+      font-family: "Bender";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 27px;
+      text-transform: capitalize;
+      text-align: left;
+    }
+
+    @include onDesign {
+      font-size: 44px;
+    }
+    }
+   
+
+      &__button {
+        margin-bottom: 25px;
+        font-size: 17px;
+        text-align: center;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        background-color: initial;
+        border:none;
+
+        @include onDesktop {
+          text-transform:capitalize
+        }
+        
+        @include onDesign {
+            font-size: 26px;
+            margin-bottom: 35px;
+        }
+      }
+
+      &__button::before {
+        position: relative;
+        display: block;
+        content: "";
+        width: 239px;
+        height: 12px;
+        background-image: url(../../assets/images/Vector_phone.svg);
+        margin-top: 25px;
+        left: 0;
+        bottom: 10px;
+    
+        @include onDesktop {
+          display: none;
+        }
+      }
+
+      &__button-hide {
+        color: #E13BC7;
+      }
+
+      &__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:flex-start;
+        gap: 7px;
+      }
+
+      &__block-head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        margin-bottom: 23px;
+        font-size: 17px;
+
+        @include onDesktop {
+            font-size: 21px;
+            margin-bottom: 35px;
+        }
+      }
+
+      &__block-round-item {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 49px;
+        height: 40px;
+        font-family: 'Bender';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        text-align: center;        
+        color: #000000;
+        background-color: #ffffff;
+        
+        @include onDesign {
+            font-size: 42px;
+            width: 114px;
+            height: 60px;
+          }
+      }
+
+      
+    &__result {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    
+        @include onDesktop {
+          margin-bottom: 20px;
+        }
+      }
+
+
+&__result-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 33px;
+    height: 33px;
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 50%;
+
+    @include onDesktop {
+      width: 41px;
+      height: 41px;
+      font-size: 17px;
+    }
+
+    @include onDesign {
+      width: 64px;
+      height: 64px;
+      font-size: 27px;
+    }
+  }
+
+  &__result-item:last-child {
+    position: relative;
+    background: #ffcbfa;
+  }
+
+  &__result-item:last-child::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    bottom: -5px;
+
+    @include onDesktop {
+      width: 30px;
+      bottom: -9px;
+    }
+
+    @include onDesign {
+      width: 40px;
+      bottom: -9px;
+    }
+  }
+
+  &__tail {
+    display: flex;
+   justify-content: center;
+  }
+}

@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.read-white {
+  display: block;
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 80px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  color: #000000;
+  padding-left: 47px;
+  padding-right: 47px;
+
+  @include onDesktop {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  @include onDesign {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../../assets/images/bottom_governase.svg);
+    background-repeat: no-repeat;
+    width: 41px;
+    height: 21px;
+    right: 50%;
+    transform: translateX(50%);
+    top: 99%;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &::before {
+    display: none;
+
+    @include onDesktop {
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("../../assets/images/title_line_bottom.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 158px;
+      height: 16px;
+      top: 99%;
+      right: 50%;
+      transform: translateX(50%);
+    }
+
+    @include onDesign {
+      width: 245px;
+      height: 24px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 30px;
+
+    @include onDesktop {
+      border-bottom: 1px solid #000;
+      padding-left: 130px;
+      padding-right: 130px;
+      padding-bottom: 50px;
+      margin-top: 50px;
+    }
+  }
+
+ 
+
+  &__item::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../../assets/images/Group77.svg);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 40px;
+    right: -15px;
+    bottom: -30px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__item:last-child::after {
+   
+      display: none;
+    
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
+
+    @include onDesktop {
+      font-size: 19px;
+      line-height: 26px;
+      margin-bottom: 25px;
+    }
+
+    @include onDesign {
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+
+  &__title-main {
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+
+    @include onDesktop {
+      text-align: left;
+      margin-bottom: 15px;
+      font-size: 27px;
+      line-height: 33px;
+      padding-left: 130px;
+      padding-right: 530px;
+    }
+
+    @include onDesign {
+      font-size: 37px;
+      line-height: 42px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include onDesktop {
+      margin-bottom: 15px;
+      font-size: 21px;
+      line-height: 24px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      line-height: 32px;
+    }
+  }
+
+  
+
+  // &__button {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   width: 154px;
+  //   height: 34px;
+  //   font-size: 17px;
+  //   color: #000;
+  //   text-transform: uppercase;
+  //   background: #66f777;
+  //   border: none;
+  //   border-radius: 17px;
+
+  //   @include onDesktop {
+  //     width: 192px;
+  //     height: 43px;
+  //     font-size: 21px;
+  //     border-radius: 21px;
+  //   }
+
+  //   @include onDesign {
+  //     width: 253px;
+  //     height: 56px;
+  //     font-size: 27px;
+  //     border-radius: 28px;
+  //   }
+  // }
+
+  // &__link {
+  //   background-color: transparent;
+  //   border: none;
+  //   text-decoration: underline;
+  //   font-size: 15px;
+  //   line-height: 20px;
+  //   margin-bottom: 15px;
+  //   padding-left: 0;
+
+  //   @include onDesktop {
+  //     font-size: 19px;
+  //     line-height: 26px;
+  //     margin-bottom: 25px;
+  //   }
+
+  //   @include onDesign {
+  //     font-size: 21px;
+  //     line-height: 30px;
+  //   }
+  // }
+}

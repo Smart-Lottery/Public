@@ -1,0 +1,822 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.choose-numbers {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+
+  @include onDesktop {
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    // padding-top: 40px;
+    margin-left: 170px;
+    // padding-right: 120px;
+ 
+  }
+
+  @include onDesign {
+    margin-left: 230px;
+    // padding-right: 150px;
+  }
+
+  &::after {
+    position: absolute;
+    display: none;
+    content: "";
+    background-image: url(../../assets/images/Choose_number_desktop.svg);
+    background-size: contain;
+
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      display: block;
+      height: 736px;
+      width: 76px;
+      left: -55px;
+      top: 75px;
+    }
+
+    @include onDesign {
+      display: block;
+      height: 1190px;
+      width: 150px;
+      left: -85px;
+      top: 90px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 300px;
+    height: 14px;
+    background-image: url(../../assets/images/Vector_line_phone.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+
+  &__title {
+    font-family: 'Bender';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @include onDesktop {
+      font-size: 29px;
+      align-self: flex-start;
+      text-transform: capitalize;
+      margin-bottom: 0;
+      padding-top: 40px;
+    }
+
+    @include onDesign {
+      font-size: 44px;
+    }
+  }
+
+  &__instruction-main {
+    display: none;
+
+    @include onDesktop {
+      position: relative;
+      display: flex;
+      align-self: flex-start;
+      max-width: 310px;
+      font-size: 17px;
+      line-height: 25px;
+      margin-bottom: 40px;
+      margin-left: 60px;
+      // top: -60px;
+    }
+
+    @include onDesign {
+      max-width: 465px;
+      font-size: 27px;
+      line-height: 37px;
+      margin-bottom: 40px;
+      margin-left: 95px;
+      // top: -50px;
+    }
+  }
+
+  &__instruction {
+    max-width: 225px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    text-align: center;
+
+    @include onDesktop {
+      font-size: 14px;
+      max-width: 100%;
+      text-align: right;
+    }
+
+    @include onDesign {
+      font-size: 21px;
+      margin-right: 0;
+    }
+  }
+
+  &__instruction-super::before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 239px;
+    height: 12px;
+    background-image: url(../../assets/images/Vector_phone.svg);
+    margin-top: 25px;
+    left: 0;
+    bottom: 10px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__instruction-desktop::after {
+    position: relative;
+    display: none;
+    content: "";
+
+    background-image: url(../../assets/images/Your_bet_desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    left: -60px;
+
+    @include onDesktop {
+      display: block;
+      width: 67px;
+      height: 27px;
+      top: -104px;
+    }
+
+    @include onDesign {
+      width: 103px;
+      height: 42px;
+      top: -124px;
+    }
+  }
+
+  &__block {
+    @include onDesktop {
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      top: -40px;
+      margin-bottom: 40px;
+      padding-left: 60px;
+      padding-right: 120px;
+     }
+    @include onDesign {
+      margin-bottom: 70px;
+      padding-left: 95px;
+      padding-right: 150px;
+    }
+  }
+
+  &__block-item {
+    padding-bottom: 30px;
+
+    @include onDesktop {
+      display: block;
+      width: 290px;
+      padding-bottom: 0;
+    }
+
+    @include onDesign {
+      display: block;
+      width: 440px;
+    }
+  }
+
+  &__row {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 260px;
+
+    @include onDesktop {
+      gap: 9px;
+    }
+
+    @include onDesign {
+      gap: 11px;
+    }
+  }
+
+  &__row button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    font-size: 17px;
+    border: none;
+
+    @include onDesktop {
+      width: 41px;
+      height: 41px;
+      font-size: 17px;
+    }
+
+    @include onDesign {
+      width: 64px;
+      height: 64px;
+      font-size: 27px;
+    }
+  }
+
+  &__row-super {
+    margin-top: 40px;
+    // margin-bottom: 40px;
+  }
+
+  &__row button:nth-child(6n + 2) {
+    margin-top: 4px;
+    margin-bottom: -4px;
+  }
+  &__row button:nth-child(6n + 3) {
+    margin-top: 8px;
+    margin-bottom: -8px;
+  }
+
+  &__row button:nth-child(6n + 4) {
+    margin-top: 12px;
+    margin-bottom: -12px;
+  }
+
+  &__row button:nth-child(6n + 5) {
+    margin-top: 16px;
+    margin-bottom: -16px;
+  }
+
+  &__row button:nth-child(6n + 6) {
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+
+  &__row-super button:nth-child(6n + 2) {
+    @include onDesktop {
+      margin-top: -4px;
+      margin-bottom: 4px;
+    }
+  }
+  &__row-super button:nth-child(6n + 3) {
+    @include onDesktop {
+      margin-top: -8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__row-super button:nth-child(6n + 4) {
+    @include onDesktop {
+      margin-top: -12px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__row-super button:nth-child(6n + 5) {
+    @include onDesktop {
+      margin-top: -16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__row-super button:nth-child(6n + 6) {
+    @include onDesktop {
+      margin-top: -20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__row button:hover {
+    background-color: #dcffe0;
+  }
+
+  @for $i from 1 through 69 {
+    &__item--#{$i} {
+      background-color: #fff;
+    }
+  }
+
+  @for $i from 1 through 69 {
+    &__item-active--#{$i} {
+      background-color: #ffcbfa;
+    }
+  }
+
+  @for $i from 1 through 25 {
+    &__item-super--#{$i} {
+      background-color: #fff;
+    }
+  }
+
+  @for $i from 1 through 25 {
+    &__item-super-active--#{$i} {
+      background-color: #ffcbfa;
+    }
+  }
+
+  &__drawings-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row;
+    }
+  }
+
+  &__drawings-block-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include onDesktop {
+      position: absolute;
+      justify-content: flex-end;
+      top: 510px;
+      right: 110px;
+    }
+    @include onDesign {
+      top: 740px;
+      right: 150px;
+    }
+  }
+
+  &__title-your-bet {
+
+
+    @include onDesktop {
+    align-self: flex-end;
+    margin-bottom: 30px;
+    }
+  }
+
+  &__button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 154px;
+    height: 34px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    background: #66f777;
+    border-radius: 17px;
+    border: none;
+
+    @include onDesktop {
+      font-size: 17px;
+      height: 37px;
+      width: 165px;
+      border-radius: 28px;
+      margin-bottom: 0;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      width: 253px;
+      height: 56px;
+      border-radius: 28px;
+    }
+  }
+  &__drawings {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+
+    @include onDesktop {
+      position: relative;
+      justify-content: flex-end;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    @include onDesign {
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__drawings span {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      position: relative;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    @include onDesign {
+      font-size: 21px;
+    }
+  }
+
+  &__drawings-instructions {
+    @include onDesktop {
+      display: block;
+      position: relative;
+      text-align: right;
+      width: 260px;
+    }
+
+    @include onDesign {
+      width: 360px;
+    }
+  }
+
+  &__drawings-input {
+    text-align: center;
+    width: 135px;
+    height: 40px;
+    margin-bottom: 25px;
+    background-color: #fff;
+    border: none;
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    color: #000;
+
+    @include onDesktop {
+      position: relative;
+      font-size: 28px;
+      width: 200px;
+      height: 35px;
+      margin: 0;
+    }
+
+    @include onDesign {
+      font-size: 44px;
+      width: 300px;
+      height: 54px;
+    }
+  }
+
+  &__drawings::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 17px;
+    width: 30px;
+    background-image: url(../../assets/images/drawings_1.svg);
+    left: 230px;
+    top: 15px;
+    background-repeat: no-repeat;
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__drawings-input::placeholder {
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    color: #c6c0c0;
+
+    @include onDesktop {
+      font-size: 24px;
+    }
+
+    @include onDesign {
+      font-size: 44px;
+    }
+  }
+
+  
+  // &__exchanges-bet {
+  //   display: flex;
+  //   flex-direction: column-reverse;
+  //   @include onDesktop {
+  //     position: relative;
+
+  //     width: 100%;
+  //   }
+  // }
+
+ 
+  // &__exchanges {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   @include onDesktop {
+  //     box-sizing: border-box;
+  //     margin-top: 80px;
+  //     flex-direction: row;
+  //     justify-content: space-between;
+  //     align-items: flex-end;
+  //     margin-left: 35px;
+  //     padding-right: 120px;
+  //     // margin-right: 50px;
+  //   }
+
+  //   @include onDesign {
+  //     margin-top: 100px;
+  //     margin-left: 70px;
+  //     padding-right: 150px;
+  //     // margin-right: 120px;
+  //   }
+  // }
+
+  // &__instal-metamask {
+  //   font-size: 17px;
+
+  //   @include onDesktop {
+  //     position: absolute;
+  //     top: 210px;
+  //     left: 60px;
+  //     font-size: 19px;
+  //   }
+
+  //   @include onDesign {
+  //     position: absolute;
+  //     top: 320px;
+  //     left: 95px;
+  //     font-size: 27px;
+  //   }
+  // }
+
+  // &__instal-metamask-two {
+  //   font-size: 17px;
+
+  //   @include onDesktop {
+  //     font-size: 19px;
+  //     max-width: 375px;
+  //     text-align: left;
+  //   }
+
+  //   @include onDesign {
+  //     font-size: 27px;
+  //     max-width: 575px;
+  //     text-align: left;
+  //   }
+  // }
+
+  // &__exchanges-binanse {
+  //   display: block;
+  //   width: 111px;
+  //   height: 60px;
+  //   margin-bottom: 35px;
+  //   background-image: url(../../assets/images/exchanges/Binance_logo_black.svg);
+  //   background-size:contain;
+  //   background-repeat: no-repeat;
+
+  //   @include onDesktop {
+  //     margin-bottom: 25px;
+  //   }
+
+  //   @include onDesign {
+  //     width: 143px;
+  //     height: 78px;
+  //   }
+  // }
+
+  // &__exchanges-binanse:hover {
+  //   background-image: url(../../assets/images/exchanges/Binance_logo_hover.svg);
+  // }
+
+  
+  // &__exchanges-coinbase {
+  
+  //   display: flex;
+  //   width: 119px;
+  //   height: 19px;
+  //   margin-bottom: 35px;
+  //   background-image: url(../../assets/images/exchanges/Coinbase-black.svg);
+  //   background-size:contain;
+  //   background-repeat: no-repeat;
+
+  //   @include onDesktop {
+  //     margin-bottom: 25px;
+  //   }
+
+  //   @include onDesign {
+  //     width: 156px;
+  //     height: 28px;
+  //   }
+  // }
+
+  // &__exchanges-coinbase:hover {
+  //   background-image: url(../../assets/images/exchanges/Coinbase_logo_hover.svg);
+  //   background-size:contain;
+  //   background-repeat: no-repeat;
+
+  // }
+ 
+  // &__exchanges-etoro {
+
+  //   display: block;
+  //   width: 88px;
+  //   height: 27px;
+  //   margin-bottom: 35px;
+  //   background-image: url(../../assets/images/exchanges/Etoro_logo_black.svg);
+  //   background-size:contain;
+  //   background-repeat: no-repeat;
+
+  //   @include onDesktop {
+  //     margin-bottom: 25px;
+  //   }
+  //   @include onDesign {
+  //     width: 114px;
+  //     height: 36px;
+  //   }
+  // }
+
+  // &__exchanges-etoro:hover {
+  //   background-image: url(../../assets/images/exchanges/Etoro_logo_hover.svg);
+
+  //  }
+ 
+  
+
+  &__bet-continer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+
+    @include onDesktop {
+      // box-sizing: border-box;
+      // width: 100%;
+      // padding-top: 48px;
+      // // padding-right: 80px;
+      // padding-bottom: 30px;
+      // align-items: flex-end;
+      // // border-top: 1px solid #000;
+      // // border-bottom: 1px solid #000;
+      // padding-right: 120px;
+    }
+    @include onDesign {
+      // padding-bottom: 50px;
+      // padding-right: 150px;
+    }
+  }
+
+  // &__bet-continer h3 {
+  //   text-transform: uppercase;
+
+  //   @include onDesktop {
+  //     position: absolute;
+  //     left: -23px;
+  //     font-family: "Bender";
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     font-size: 27px;
+  //     color: #1d1d1b;
+  //     text-transform: capitalize;
+  //   }
+  //   @include onDesign {
+  //     font-size: 44px;
+  //   }
+  // }
+
+  &__your-bet {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 20px;
+
+    @include onDesktop {
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    @include onDesign {
+      gap: 10px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__your-bet-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    font-family: "Bender";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26.7781px;
+    background: #ffcbfa;
+    border-radius: 50%;
+    color: #000000;
+    border: none;
+
+    @include onDesktop {
+      font-size: 17px;
+      width: 41px;
+      height: 41px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  &__your-bet-item-super {
+    position: relative;
+    background: #ff8af3e0;
+  }
+
+  &__your-bet-item-super::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 25px;
+    background-color: #000;
+    top: 47px;
+
+    @include onDesktop {
+      width: 30px;
+      top: 45px;
+    }
+
+    @include onDesign {
+      width: 45px;
+      top: 70px;
+    }
+  }
+
+  &__enter {
+    @include onDesktop {
+      align-self:flex-end;
+    }
+  
+  }
+
+  &__enter::after {
+    position: relative;
+    display: block;
+    content: "";
+    height: 23px;
+    width: 10px;
+    background-image: url(../../assets/images/Vector_button_enter.svg);
+    right: 120px;
+    background-repeat: no-repeat;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__button-random {
+    background-color: #ff8af3;
+
+    @include onDesktop {
+      text-align: left;
+      align-self: flex-start;
+      margin-left: 60px;
+      margin-bottom: 40px;
+      background-color: #ff8af3;
+      // top: -60px;
+      // left:- 100px;
+    }
+    @include onDesign {
+      margin-left: 90px;
+      margin-bottom: 50px;
+      // transform: translateX(-100%);
+    }
+  }
+}

@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "Bender";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bender"), url("../../assets/fonts/Bender.woff") format("woff");
+}
+
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.MainQuestions {
+  display: flex;
+  padding-bottom: 50px;
+
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+
+  @include onDesktop {
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  &__desktop-hiden {
+    @include onDesktop {
+      display: none;
+    }
+  }
+  &__phone-hiden {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__block-title {
+    display: none;
+    flex-direction: column;
+
+    @include onDesktop {
+      position: sticky;
+      top: 0;
+      display: flex;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    position: sticky;
+    padding: 35px 100px 15px 38px;
+    background: initial;
+    border: none;
+    font-size: 18px;
+    text-decoration: underline;
+    white-space: nowrap;
+    text-align: left;
+
+    @include onDesign {
+      padding: 60px 160px 32px 40px;
+      font-size: 27px;
+    }
+  }
+
+  &__buttom_up {
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    top: 420px;
+    object-fit: contain;
+    border:none;
+    background: initial;
+    cursor: pointer;
+    
+
+    @include onDesign {
+      top: 655px;
+    }
+  }
+
+  &__buttom_up img {
+    width: 30px;
+    height: 30px;
+
+    @include onDesign {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title-HowItWorks {
+    top: 20px;
+    @include onDesign {
+      top: 30px;
+    }
+  }
+  &__title-PayoutSructure {
+    top: 100px;
+    @include onDesign {
+      top: 155px;
+    }
+  }
+  &__title-TokenAndGovernance {
+    top: 180px;
+    @include onDesign {
+      top: 280px;
+    }
+  }
+  &__title-IWantTheSameDApp {
+    top: 260px;
+    @include onDesign {
+      top: 405px;
+    }
+  }
+  &__title-Disclaimer {
+    top: 340px;
+    @include onDesign {
+      top: 530px;
+    }
+  }
+
+  &__title-Disclaimer::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../../assets/images/title_line_bottom.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 158px;
+    height: 16px;
+    top: 160px;
+    left: 10px;
+
+    @include onDesign {
+      top: 185px;
+      width: 245px;
+      height: 24px;
+    }
+  }
+
+  &__title:hover {
+    color: #e13bc7;
+    text-decoration: none;
+  }
+
+  &__title-active {
+    text-decoration: none;
+    color: #e13bc7;
+  }
+
+  &__title::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url("../../assets/images/title_line.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 325px;
+    height: 17px;
+    top: -5px;
+    left: 0;
+
+    @include onDesign {
+      width: 485px;
+      height: 25px;
+    }
+  }
+
+  &__block-inform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      position: relative;
+      box-sizing: border-box;
+      background-color: #faf8f7;
+      max-width: 615px;
+      padding-bottom: 55px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @include onDesign {
+      max-width: 903px;
+    }
+  }
+
+  &__inform-block {
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    @include onDesktop {
+
+      padding-bottom: 40px;
+    }
+  }
+
+  &__inform-title {
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-bottom: 10px;
+
+    @include onDesktop {
+      font-size: 22px;
+    }
+
+    @include onDesign {
+      font-size: 34px;
+    }
+  }
+
+  &__inform-title-payout {
+    @include onDesktop {
+      margin-left: 35px;
+    }
+  }
+
+  &__inform {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    list-style: none;
+
+    @include onDesktop {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    @include onDesign {
+      font-size: 27px;
+      line-height: 35px;
+    }
+  }
+
+  &__inform li {
+    list-style: none;
+    margin-bottom: 10px;
+
+    @include onDesktop {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__inform::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-image: url(../../assets/images/Group77.svg);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 40px;
+    right: 0;
+    bottom: -30px;
+
+    @include onDesktop {
+      bottom: -50px;
+    }
+  }
+
+  &__button {
+    display: block;
+    text-decoration-line: underline;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    font-size: 17px;
+
+    @include onDesktop {
+      font-size: 20px;
+    }
+
+    @include onDesign {
+      font-size: 30px;
+    }
+  }
+  &__button-governance {
+    color: #000;
+  }
+}
