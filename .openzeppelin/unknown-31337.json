@@ -1,0 +1,2081 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "txHash": "0xe67eed95a557f7f3aa7cf06ddfd41893f89048c6c277038da9e8939d3c8e485b"
+  },
+  "proxies": [
+    {
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "txHash": "0x183d777954e16e8b838adf2752d3aeb9abe81e9b1d7e75240c14c4e61b46e29b",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707",
+      "txHash": "0x1f845ff5ba4b23ab2a638942307da253b59ee99625de93e7f14e98024bf12b3b",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "d22be60ee29c4e94087b9f0ab8dcfef50b9ddf0cd4d55058d379e912d750310d": {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0xffecdc23b41681badcb7ad74b17f1643e6a933a15072203a1c131005fd10226c",
+      "layout": {
+        "solcVersion": "0.8.9",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "manager",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:16"
+          },
+          {
+            "label": "round",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:17"
+          },
+          {
+            "label": "__gap1",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:20"
+          },
+          {
+            "label": "__gap2",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:21"
+          },
+          {
+            "label": "__gap3",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:22"
+          },
+          {
+            "label": "__gap4",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:23"
+          },
+          {
+            "label": "playerEntries",
+            "offset": 0,
+            "slot": "353",
+            "type": "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:35"
+          },
+          {
+            "label": "generatedNumbers",
+            "offset": 0,
+            "slot": "354",
+            "type": "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:43"
+          },
+          {
+            "label": "roundBalances",
+            "offset": 0,
+            "slot": "355",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:45"
+          },
+          {
+            "label": "withdrawalsInfo",
+            "offset": 0,
+            "slot": "356",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:48"
+          },
+          {
+            "label": "roundBalancesWithdrawn",
+            "offset": 0,
+            "slot": "357",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:49"
+          },
+          {
+            "label": "entriesCount",
+            "offset": 0,
+            "slot": "358",
+            "type": "t_uint256",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:51"
+          },
+          {
+            "label": "entered",
+            "offset": 0,
+            "slot": "359",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:53"
+          },
+          {
+            "label": "listOfPlayers",
+            "offset": 0,
+            "slot": "360",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:54"
+          },
+          {
+            "label": "withdrawnInfo",
+            "offset": 0,
+            "slot": "361",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:56"
+          },
+          {
+            "label": "withdrawnFeesInfo",
+            "offset": 0,
+            "slot": "362",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:58"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "363",
+            "type": "t_contract(CryptoLotteryToken)712",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:60"
+          },
+          {
+            "label": "tokenAddress",
+            "offset": 0,
+            "slot": "364",
+            "type": "t_address",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:61"
+          },
+          {
+            "label": "votedForTransfer",
+            "offset": 0,
+            "slot": "365",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:72"
+          },
+          {
+            "label": "requests",
+            "offset": 0,
+            "slot": "366",
+            "type": "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:73"
+          },
+          {
+            "label": "EntryTicket",
+            "offset": 0,
+            "slot": "367",
+            "type": "t_uint256",
+            "contract": "CryptoLottery",
+            "src": "contracts/CryptoLottery.sol:75"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PlayerEntry)771_storage)dyn_storage": {
+            "label": "struct CryptoLottery.PlayerEntry[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage": {
+            "label": "struct CryptoLottery.RequestForTransfer[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)5_storage": {
+            "label": "uint256[5]",
+            "numberOfBytes": "160"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(CryptoLotteryToken)712": {
+            "label": "contract CryptoLotteryToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)": {
+            "label": "mapping(address => struct CryptoLottery.PlayerEntry[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)": {
+            "label": "mapping(uint256 => struct CryptoLottery.GeneratedNumbers)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(GeneratedNumbers)786_storage": {
+            "label": "struct CryptoLottery.GeneratedNumbers",
+            "members": [
+              {
+                "label": "round",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(PlayerEntry)771_storage": {
+            "label": "struct CryptoLottery.PlayerEntry",
+            "members": [
+              {
+                "label": "roundEntered",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(RequestForTransfer)848_storage": {
+            "label": "struct CryptoLottery.RequestForTransfer",
+            "members": [
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "complete",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              },
+              {
+                "label": "votesToApproveTransfer",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "4f8db8e5f7ca88d15f282505e211b365a9356b9a718269fbb1b7ee5e0aae200a": {
+      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "txHash": "0xca292d2de86b29d9f7ac452e62b54a0278abd6af3dd927b6a62eba0a9dadbf78",
+      "layout": {
+        "solcVersion": "0.8.9",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "manager",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:17"
+          },
+          {
+            "label": "round",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:18"
+          },
+          {
+            "label": "__gap1",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:21"
+          },
+          {
+            "label": "__gap2",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:22"
+          },
+          {
+            "label": "__gap3",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:23"
+          },
+          {
+            "label": "__gap4",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:24"
+          },
+          {
+            "label": "playerEntries",
+            "offset": 0,
+            "slot": "353",
+            "type": "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:36"
+          },
+          {
+            "label": "generatedNumbers",
+            "offset": 0,
+            "slot": "354",
+            "type": "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:44"
+          },
+          {
+            "label": "roundBalances",
+            "offset": 0,
+            "slot": "355",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:46"
+          },
+          {
+            "label": "withdrawalsInfo",
+            "offset": 0,
+            "slot": "356",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:49"
+          },
+          {
+            "label": "roundBalancesWithdrawn",
+            "offset": 0,
+            "slot": "357",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:50"
+          },
+          {
+            "label": "entriesCount",
+            "offset": 0,
+            "slot": "358",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:52"
+          },
+          {
+            "label": "entered",
+            "offset": 0,
+            "slot": "359",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:54"
+          },
+          {
+            "label": "listOfPlayers",
+            "offset": 0,
+            "slot": "360",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:55"
+          },
+          {
+            "label": "withdrawnInfo",
+            "offset": 0,
+            "slot": "361",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:57"
+          },
+          {
+            "label": "withdrawnFeesInfo",
+            "offset": 0,
+            "slot": "362",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:59"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "363",
+            "type": "t_contract(CryptoLotteryToken)712",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:61"
+          },
+          {
+            "label": "tokenAddress",
+            "offset": 0,
+            "slot": "364",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:62"
+          },
+          {
+            "label": "votedForTransfer",
+            "offset": 0,
+            "slot": "365",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:73"
+          },
+          {
+            "label": "requests",
+            "offset": 0,
+            "slot": "366",
+            "type": "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:74"
+          },
+          {
+            "label": "EntryTicket",
+            "offset": 0,
+            "slot": "367",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:76"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PlayerEntry)771_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)5_storage": {
+            "label": "uint256[5]",
+            "numberOfBytes": "160"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(CryptoLotteryToken)712": {
+            "label": "contract CryptoLotteryToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)": {
+            "label": "mapping(address => struct CryptoLottery2.PlayerEntry[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)": {
+            "label": "mapping(uint256 => struct CryptoLottery2.GeneratedNumbers)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(GeneratedNumbers)786_storage": {
+            "label": "struct CryptoLottery2.GeneratedNumbers",
+            "members": [
+              {
+                "label": "round",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(PlayerEntry)771_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry",
+            "members": [
+              {
+                "label": "roundEntered",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(RequestForTransfer)848_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer",
+            "members": [
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "complete",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              },
+              {
+                "label": "votesToApproveTransfer",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "41e8615756a5e56540b01965f77253babde2c7cb6fc152d0733341f22a28a16a": {
+      "address": "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      "txHash": "0xd89736ecac8c69f3442a9d7c961338ee1c71d9657ca74d53cf2cd89804635fbf",
+      "layout": {
+        "solcVersion": "0.8.9",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "manager",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:17"
+          },
+          {
+            "label": "round",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:18"
+          },
+          {
+            "label": "__gap1",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:21"
+          },
+          {
+            "label": "__gap2",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:22"
+          },
+          {
+            "label": "__gap3",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:23"
+          },
+          {
+            "label": "__gap4",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:24"
+          },
+          {
+            "label": "playerEntries",
+            "offset": 0,
+            "slot": "353",
+            "type": "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:36"
+          },
+          {
+            "label": "generatedNumbers",
+            "offset": 0,
+            "slot": "354",
+            "type": "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:44"
+          },
+          {
+            "label": "roundBalances",
+            "offset": 0,
+            "slot": "355",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:46"
+          },
+          {
+            "label": "withdrawalsInfo",
+            "offset": 0,
+            "slot": "356",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:49"
+          },
+          {
+            "label": "roundBalancesWithdrawn",
+            "offset": 0,
+            "slot": "357",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:50"
+          },
+          {
+            "label": "entriesCount",
+            "offset": 0,
+            "slot": "358",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:52"
+          },
+          {
+            "label": "entered",
+            "offset": 0,
+            "slot": "359",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:54"
+          },
+          {
+            "label": "listOfPlayers",
+            "offset": 0,
+            "slot": "360",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:55"
+          },
+          {
+            "label": "withdrawnInfo",
+            "offset": 0,
+            "slot": "361",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:57"
+          },
+          {
+            "label": "withdrawnFeesInfo",
+            "offset": 0,
+            "slot": "362",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:59"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "363",
+            "type": "t_contract(CryptoLotteryToken)712",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:61"
+          },
+          {
+            "label": "tokenAddress",
+            "offset": 0,
+            "slot": "364",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:62"
+          },
+          {
+            "label": "votedForTransfer",
+            "offset": 0,
+            "slot": "365",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:73"
+          },
+          {
+            "label": "requests",
+            "offset": 0,
+            "slot": "366",
+            "type": "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:74"
+          },
+          {
+            "label": "EntryTicket",
+            "offset": 0,
+            "slot": "367",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:76"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PlayerEntry)771_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)5_storage": {
+            "label": "uint256[5]",
+            "numberOfBytes": "160"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(CryptoLotteryToken)712": {
+            "label": "contract CryptoLotteryToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)": {
+            "label": "mapping(address => struct CryptoLottery2.PlayerEntry[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)": {
+            "label": "mapping(uint256 => struct CryptoLottery2.GeneratedNumbers)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(GeneratedNumbers)786_storage": {
+            "label": "struct CryptoLottery2.GeneratedNumbers",
+            "members": [
+              {
+                "label": "round",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(PlayerEntry)771_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry",
+            "members": [
+              {
+                "label": "roundEntered",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(RequestForTransfer)848_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer",
+            "members": [
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "complete",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              },
+              {
+                "label": "votesToApproveTransfer",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "c87d0dbfdaec19dacf0dbae3504639ea19fb9fe3dde86dc71d29776843c5e931": {
+      "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
+      "txHash": "0xc11b4de06fc95389cb0ab376cd294ece92eb4dec9e9c486e4a2c233a819752ce",
+      "layout": {
+        "solcVersion": "0.8.9",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "manager",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:17"
+          },
+          {
+            "label": "round",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:18"
+          },
+          {
+            "label": "__gap1",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:21"
+          },
+          {
+            "label": "__gap2",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:22"
+          },
+          {
+            "label": "__gap3",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:23"
+          },
+          {
+            "label": "__gap4",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:24"
+          },
+          {
+            "label": "playerEntries",
+            "offset": 0,
+            "slot": "353",
+            "type": "t_mapping(t_address,t_array(t_struct(PlayerEntry)2539_storage)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:36"
+          },
+          {
+            "label": "generatedNumbers",
+            "offset": 0,
+            "slot": "354",
+            "type": "t_mapping(t_uint256,t_struct(GeneratedNumbers)2554_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:44"
+          },
+          {
+            "label": "roundBalances",
+            "offset": 0,
+            "slot": "355",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:46"
+          },
+          {
+            "label": "withdrawalsInfo",
+            "offset": 0,
+            "slot": "356",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:49"
+          },
+          {
+            "label": "roundBalancesWithdrawn",
+            "offset": 0,
+            "slot": "357",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:50"
+          },
+          {
+            "label": "entriesCount",
+            "offset": 0,
+            "slot": "358",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:52"
+          },
+          {
+            "label": "entered",
+            "offset": 0,
+            "slot": "359",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:54"
+          },
+          {
+            "label": "listOfPlayers",
+            "offset": 0,
+            "slot": "360",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:55"
+          },
+          {
+            "label": "withdrawnInfo",
+            "offset": 0,
+            "slot": "361",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:57"
+          },
+          {
+            "label": "withdrawnFeesInfo",
+            "offset": 0,
+            "slot": "362",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:59"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "363",
+            "type": "t_contract(CryptoLotteryToken)2480",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:61"
+          },
+          {
+            "label": "tokenAddress",
+            "offset": 0,
+            "slot": "364",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:62"
+          },
+          {
+            "label": "votedForTransfer",
+            "offset": 0,
+            "slot": "365",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:73"
+          },
+          {
+            "label": "requests",
+            "offset": 0,
+            "slot": "366",
+            "type": "t_array(t_struct(RequestForTransfer)2616_storage)dyn_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:74"
+          },
+          {
+            "label": "EntryTicket",
+            "offset": 0,
+            "slot": "367",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:76"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PlayerEntry)2539_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(RequestForTransfer)2616_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)5_storage": {
+            "label": "uint256[5]",
+            "numberOfBytes": "160"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(CryptoLotteryToken)2480": {
+            "label": "contract CryptoLotteryToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(PlayerEntry)2539_storage)dyn_storage)": {
+            "label": "mapping(address => struct CryptoLottery2.PlayerEntry[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(GeneratedNumbers)2554_storage)": {
+            "label": "mapping(uint256 => struct CryptoLottery2.GeneratedNumbers)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(GeneratedNumbers)2554_storage": {
+            "label": "struct CryptoLottery2.GeneratedNumbers",
+            "members": [
+              {
+                "label": "round",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(PlayerEntry)2539_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry",
+            "members": [
+              {
+                "label": "roundEntered",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(RequestForTransfer)2616_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer",
+            "members": [
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "complete",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              },
+              {
+                "label": "votesToApproveTransfer",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "764b0cc0ca6b153e6bd20224651ce9f3df2f5a136a23d1a50f122576f315b2dd": {
+      "address": "0x68B1D87F95878fE05B998F19b66F4baba5De1aed",
+      "txHash": "0x839660cc358b330f3c0181085d378164ed1057875d1ac6986630fbb9deb89e76",
+      "layout": {
+        "solcVersion": "0.8.9",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:36"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_bool",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:29"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "102",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "PausableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol:116"
+          },
+          {
+            "label": "manager",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:20"
+          },
+          {
+            "label": "round",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:21"
+          },
+          {
+            "label": "__gap1",
+            "offset": 0,
+            "slot": "153",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:24"
+          },
+          {
+            "label": "__gap2",
+            "offset": 0,
+            "slot": "203",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:25"
+          },
+          {
+            "label": "__gap3",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:26"
+          },
+          {
+            "label": "__gap4",
+            "offset": 0,
+            "slot": "303",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:27"
+          },
+          {
+            "label": "playerEntries",
+            "offset": 0,
+            "slot": "353",
+            "type": "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:39"
+          },
+          {
+            "label": "generatedNumbers",
+            "offset": 0,
+            "slot": "354",
+            "type": "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:47"
+          },
+          {
+            "label": "roundBalances",
+            "offset": 0,
+            "slot": "355",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:49"
+          },
+          {
+            "label": "withdrawalsInfo",
+            "offset": 0,
+            "slot": "356",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:52"
+          },
+          {
+            "label": "roundBalancesWithdrawn",
+            "offset": 0,
+            "slot": "357",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:53"
+          },
+          {
+            "label": "entriesCount",
+            "offset": 0,
+            "slot": "358",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:55"
+          },
+          {
+            "label": "entered",
+            "offset": 0,
+            "slot": "359",
+            "type": "t_mapping(t_address,t_bool)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:57"
+          },
+          {
+            "label": "listOfPlayers",
+            "offset": 0,
+            "slot": "360",
+            "type": "t_mapping(t_uint256,t_array(t_address)dyn_storage)",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:58"
+          },
+          {
+            "label": "withdrawnInfo",
+            "offset": 0,
+            "slot": "361",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:60"
+          },
+          {
+            "label": "withdrawnFeesInfo",
+            "offset": 0,
+            "slot": "362",
+            "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:62"
+          },
+          {
+            "label": "token",
+            "offset": 0,
+            "slot": "363",
+            "type": "t_contract(CryptoLotteryToken)712",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:64"
+          },
+          {
+            "label": "tokenAddress",
+            "offset": 0,
+            "slot": "364",
+            "type": "t_address",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:65"
+          },
+          {
+            "label": "votedForTransfer",
+            "offset": 0,
+            "slot": "365",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:76"
+          },
+          {
+            "label": "requests",
+            "offset": 0,
+            "slot": "366",
+            "type": "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:77"
+          },
+          {
+            "label": "EntryTicket",
+            "offset": 0,
+            "slot": "367",
+            "type": "t_uint256",
+            "contract": "CryptoLottery2",
+            "src": "contracts/CryptoLotteryv2.sol:79"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(PlayerEntry)771_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(RequestForTransfer)848_storage)dyn_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_array(t_uint256)5_storage": {
+            "label": "uint256[5]",
+            "numberOfBytes": "160"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(CryptoLotteryToken)712": {
+            "label": "contract CryptoLotteryToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_array(t_struct(PlayerEntry)771_storage)dyn_storage)": {
+            "label": "mapping(address => struct CryptoLottery2.PlayerEntry[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+            "label": "mapping(address => mapping(uint256 => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_array(t_address)dyn_storage)": {
+            "label": "mapping(uint256 => address[])",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_bool)": {
+            "label": "mapping(uint256 => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+            "label": "mapping(uint256 => mapping(address => bool))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(uint256 => mapping(address => uint256))",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_struct(GeneratedNumbers)786_storage)": {
+            "label": "mapping(uint256 => struct CryptoLottery2.GeneratedNumbers)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(GeneratedNumbers)786_storage": {
+            "label": "struct CryptoLottery2.GeneratedNumbers",
+            "members": [
+              {
+                "label": "round",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(PlayerEntry)771_storage": {
+            "label": "struct CryptoLottery2.PlayerEntry",
+            "members": [
+              {
+                "label": "roundEntered",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "numbers",
+                "type": "t_array(t_uint256)5_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "supernumber",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              }
+            ],
+            "numberOfBytes": "224"
+          },
+          "t_struct(RequestForTransfer)848_storage": {
+            "label": "struct CryptoLottery2.RequestForTransfer",
+            "members": [
+              {
+                "label": "description",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "value",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "recipient",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "complete",
+                "type": "t_bool",
+                "offset": 20,
+                "slot": "2"
+              },
+              {
+                "label": "votesToApproveTransfer",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
