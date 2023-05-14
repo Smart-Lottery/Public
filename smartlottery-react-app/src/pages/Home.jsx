@@ -12,9 +12,7 @@ import {  useLocation } from "react-router-dom";
 import { useSigner  } from "wagmi";
 import Web3 from "web3";
 
-// const web3 = new Web3(Web3.givenProvider);
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS;
-// const lottery = new web3.eth.Contract(SmartLotteryABI, contractAddress);
 
 export const Home = () => {
   const { data } = useSigner();
@@ -44,10 +42,16 @@ export const Home = () => {
         ticketPrice: ticketPrice,
        
       });
-      localStorage.setItem('partnerAddress', JSON.stringify(location.search));
     }
     fetchData();
   }, [data]);
+
+  useEffect(() => {
+    if(location.search !== "") {
+      localStorage.setItem('partnerAddress', JSON.stringify(location.search));
+    }
+   }, [location]);
+
 
 
   useEffect(() => {

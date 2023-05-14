@@ -348,7 +348,7 @@ export const LaunchApp = () => {
     if (datalottery.partnerAddress !== "") {
       curentPartnerAddress = String(datalottery.partnerAddress);
     } else {
-      curentPartnerAddress = "0x17744a8E2C55B24bAdAFC555b294d81766f457eE";
+      curentPartnerAddress = "ENTER YOUR PARTNER ADDRESS";
     }
 
     let result = true;
@@ -373,7 +373,7 @@ export const LaunchApp = () => {
       setData({ ...datalottery, message: "You have been entered!" });
       fetchDataLottery();
     } else {
-      curentPartnerAddress = "0x17744a8E2C55B24bAdAFC555b294d81766f457eE";
+      curentPartnerAddress = "ENTER YOUR PARTNER ADDRESS";
 
       try {
         await lottery.methods

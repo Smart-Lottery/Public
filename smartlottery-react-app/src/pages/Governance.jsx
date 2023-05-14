@@ -7,18 +7,26 @@ import { useSigner  } from "wagmi";
 import axios from "axios";
 import Web3 from "web3";
 import { SmartLotteryTokenSaleABI } from "../abi/abiTokenSale";
+import { SmartLotteryTokenABI } from "../abi/abiToken";
 
 const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS_GOVERNANCE;
+const tokenAddress = process.env.REACT_APP_CONTRACT_ADDRESS_TOKEN;
+
+console.log("Contract Address: ", contractAddress);
+console.log("Token Address: ", tokenAddress);
 
 export const Governance = () =>  {
   const [changePopup, setChangePopup] = useState(false);
   const { data } = useSigner();
   const[web3, setWeb3 ] = useState();
   const[lotteryToken, setLotteryToken ] = useState();
+  const [tokenSLT, setTokenSLT] = useState();
+  const [tokenTotalSupply, setTokenTotalSupply] = useState();
 
   const [dataToken, setData] = useState({
       exchangeRate: "",
       tokenPrice: "",
+      tokenTotalSupply: "0",
       message: ""
   });
 
@@ -41,32 +49,37 @@ export const Governance = () =>  {
   }, [])
 
   useEffect(() => {
-    const unspecifiedData = data;
     async function fetchData() {
-      const web3 = new Web3(unspecifiedData?.provider?.provider);
-      setWeb3(web3);
-      const lotteryToken = new web3.eth.Contract(SmartLotteryTokenSaleABI, contractAddress);
-      setLotteryToken(lotteryToken);
+      if (data && data.provider) {
+        const web3 = new Web3(data.provider.provider);
+        setWeb3(web3);
+        const lotteryToken = new web3.eth.Contract(SmartLotteryTokenSaleABI, contractAddress);
+        setLotteryToken(lotteryToken);
+        const tokenSLT = new web3.eth.Contract(SmartLotteryTokenABI, tokenAddress);
+        setTokenSLT(tokenSLT);
+  
+        const exchangeRate = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=MATICUSDT`);
+        const tokenPrice = await lotteryToken.methods.tokenPrice().call();
+        let tokenTotalSupply = "";  // Declare tokenTotalSupply here
+  
+        try {
+          tokenTotalSupply = await tokenSLT.methods.totalSupply().call();  // Assign value here
+          console.log("tokenTotalSupply: ", tokenTotalSupply)
+        } catch (error) {
+          console.error("Error getting total supply: ", error);
+        }
+  
+        setData({
+          ...dataToken,
+          exchangeRate: exchangeRate.data.price,
+          tokenPrice: tokenPrice,
+          tokenTotalSupply: tokenTotalSupply,
+        });
+      }
     }
     fetchData();
   }, [data]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const exchangeRate = await axios.get(
-        `https://api.binance.com/api/v3/ticker/price?symbol=MATICUSDT`
-      );
-      const tokenPrice = await lotteryToken.methods.tokenPrice().call();
-       console.log(tokenPrice);
-
-      setData({
-        ...dataToken,
-        exchangeRate: exchangeRate.data.price,
-        tokenPrice: tokenPrice,
-      });
-    }
-    fetchData();
-  }, [lotteryToken]);
 
 
   const handleBuyTokens = async (event, amount) => {
@@ -94,6 +107,7 @@ export const Governance = () =>  {
         exchangeRate={exchangeRate}
         tokenPrice={tokenPrice}
         handleBuyTokens={handleBuyTokens}
+        tokenTotalSupply={dataToken.tokenTotalSupply}
       />
       {changePopup && (
             <div>

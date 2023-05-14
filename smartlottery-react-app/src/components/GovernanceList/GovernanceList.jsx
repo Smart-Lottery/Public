@@ -1,12 +1,19 @@
 import { useState } from "react";
 import "./GovernanceList.scss";
+import { utils } from 'ethers';
+import { Link } from "react-router-dom";
+
 
 export const GovernanceList = ({
   tokenPrice,
   exchangeRate,
-  handleBuyTokens
+  handleBuyTokens,
+  tokenTotalSupply
 }) => {
   const [amount, setAmount] = useState(1)
+  const formattedTokenTotalSupply = tokenTotalSupply ? utils.formatEther(tokenTotalSupply) : 0;
+
+  console.log ('tokenTotalSupply', tokenTotalSupply)
   return (
     <div className="governance-list">
       
@@ -19,12 +26,25 @@ export const GovernanceList = ({
         </div>
         <h2 className="governance-list__title">Smart Lottery Tokens (SLT)</h2>
         <div className="governance-list__text">
-          Smart Lottery Tokens (SLT) is an ERC20 token that forms the backbone
-          of the CryptoLottery ecosystem. As an SLT holder, you can participate
-          in protocol governance and earn a share of the fees collected each
-          round. SLT has a fixed supply of 1,000,000 tokens, ensuring that your
-          token will not be devalued with higher emission.
-        </div>
+  Smart Lottery Tokens (SLT) is an ERC20 token that forms the backbone
+  of the CryptoLottery ecosystem. As an SLT holder, you can participate
+  in protocol governance and earn a share of the fees collected each
+  round. 
+  <ul>
+    <li><strong>Current supply of SLT is {(tokenTotalSupply * 10 ** -18).toFixed(2)}</strong> tokens.</li>
+    <li><strong>2%  of the total supply can be minted every month.</strong> This allows for the token supply to grow as the number of users increases. At the same time it prevents from devaluatin of the token.</li>
+    <li><strong>SLT has a fixed supply of 1,000,000</strong> tokens, ensuring that your token will not be devalued with higher emission.</li>
+  </ul>
+  <Link
+    to="https://polygonscan.com/token/0x96b94fd49e621ebe05c57c3a1e7dd5b2891d2644"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="MainQuestions__button MainQuestions__button-governance"
+  >
+    Explore token on Polygonscan
+  </Link>
+</div>
+
       </div>
 
       <div className="governance-list__item">

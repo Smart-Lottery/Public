@@ -11,10 +11,10 @@ import "./index.scss";
 import { EthereumClient, w3mConnectors, w3mProvider } from '@web3modal/ethereum';
 import { Web3Modal } from '@web3modal/react';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { polygonMumbai } from 'wagmi/chains';
+import { polygon } from 'wagmi/chains';
 
 const projectId = process.env.REACT_APP_PROJECT_ID;
-const chains = [polygonMumbai];
+const chains = [polygon];
 
 const { provider} = configureChains(
   chains,

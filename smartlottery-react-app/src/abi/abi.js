@@ -366,6 +366,19 @@ export const SmartLotteryABI = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "partnerContract",
+		"outputs": [
+			{
+				"internalType": "contract Partners",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",

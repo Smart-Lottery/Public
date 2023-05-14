@@ -108,15 +108,18 @@ export const RobotDesktop = () => {
         />
         <div className="robot-desktop__text">
           <p>
-            Transparent and fair lottery on smart contract that you can
-            understand 
+            Transparent and fair lottery on{" "}
+            <a
+              href="https://polygonscan.com/address/0x001201D9D2B2EbF54a2F5581670bfd3d25FCFe1D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              smart contract
+            </a>{" "}
+            that you can understand
           </p>
-          <p>
-            Higher payouts than in traditional lotteries
-          </p>
-          <p>
-           Fully decentralized and controlled by community
-          </p>
+          <p>Higher payouts than in traditional lotteries</p>
+          <p>Fully decentralized and controlled by community</p>
         </div>
       </div>
     </div>

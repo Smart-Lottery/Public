@@ -4,6 +4,7 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github.css";
 import { useRef } from "react";
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export const PartnersList = ({withdraw}) => {
 
@@ -57,7 +58,7 @@ export const PartnersList = ({withdraw}) => {
             getGitHub.current.scrollIntoView({ behavior: "smooth" })
           }
           className="partners-list__text partners-list__link">
-            2. Get the full code from our GitHub and launch your site right
+            2. Get the full code from our <a href='https://github.com/Smart-Lottery/Public/tree/master' target='_blank' rel='noopener noreferrer'>GitHub </a> and launch your site right
             away.
           </button>
           <button
@@ -74,6 +75,20 @@ export const PartnersList = ({withdraw}) => {
           in other ways are referred to as Partners. Partners earn fees from
           referring clients and can withdraw their portion of the fees from each
           round, which can be used for marketing or other purposes.
+
+          If you are a Partner already, you can withdraw your fees for the round by using the form below:
+        </div>
+        <div className="partners-list__container-actions">
+        <input 
+            className="partners-list__input" 
+            type='number' 
+            value={checkRound}
+            onChange={(e) => setCheckRound(e.target.value )}
+            placeholder="Round number"
+            />
+        <button className="partners-list__button" onClick={() => withdraw(checkRound)}> 
+         Withdraw partners fees
+        </button>
         </div>
       </div>
       <div className="partners-list__item">
@@ -97,24 +112,10 @@ export const PartnersList = ({withdraw}) => {
           2. GET OUR PRODUCTION READY CODE
         </h3>
         <div className="partners-list__text">
-          You can download our production-ready code from this GitHub
-          repository, tailor the design to your preferences, and deploy it on
+          You can download our production-ready code from this <a href='https://github.com/Smart-Lottery/Public/tree/master' target='_blank' rel='noopener noreferrer'>GitHub </a>
+   repository, tailor the design to your preferences, and deploy it on
           any domain of your choice. Don't forget to replace "ENTER YOUR PARTNER
-          ADDRESS" with your own Polygon wallet address. Once the clients enter
-          the lottery through your website, you can withdraw your fees for every
-          round by pressing the button below”
-        </div>
-        <div className="partners-list__container-actions">
-        <input 
-            className="partners-list__input" 
-            type='number' 
-            value={checkRound}
-            onChange={(e) => setCheckRound(e.target.value )}
-            placeholder="Round number"
-            />
-        <button className="partners-list__button" onClick={() => withdraw(checkRound)}> 
-         Withdraw partners fees
-        </button>
+          ADDRESS" with your own Polygon wallet address.
         </div>
         
    

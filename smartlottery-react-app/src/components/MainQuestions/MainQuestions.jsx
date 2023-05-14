@@ -12,7 +12,7 @@ import {
   handleDisclaimer,
 } from "store/reducers/navigate/navigate";
 import useOutsideClick from "@rooks/use-outside-click";
-import  button_up from "../../assets/images/buttom_up_main.svg";
+import button_up from "../../assets/images/buttom_up_main.svg";
 let classNames = require("classnames");
 
 export const MainQuestions = ({ exchangeRate, balance }) => {
@@ -81,52 +81,69 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
     <div className="MainQuestions">
       <div className="MainQuestions__block-title">
         <button
-          className={classNames("MainQuestions__title MainQuestions__title-HowItWorks", {
-            "MainQuestions__title-active": togleHowItWorks,
-          })}
+          className={classNames(
+            "MainQuestions__title MainQuestions__title-HowItWorks",
+            {
+              "MainQuestions__title-active": togleHowItWorks,
+            }
+          )}
           onClick={() => dispatch(handleHowItWorks(true))}
         >
           How It Works
         </button>
         <button
-          className={classNames("MainQuestions__title MainQuestions__title-PayoutSructure", {
-            "MainQuestions__title-active": toglePayoutSructure,
-          })}
+          className={classNames(
+            "MainQuestions__title MainQuestions__title-PayoutSructure",
+            {
+              "MainQuestions__title-active": toglePayoutSructure,
+            }
+          )}
           onClick={() => dispatch(handlePayoutSructure(true))}
         >
           Payout structure
         </button>
         <button
-          className={classNames("MainQuestions__title  MainQuestions__title-TokenAndGovernance", {
-            "MainQuestions__title-active": togleTokenAndGovernance,
-          })}
+          className={classNames(
+            "MainQuestions__title  MainQuestions__title-TokenAndGovernance",
+            {
+              "MainQuestions__title-active": togleTokenAndGovernance,
+            }
+          )}
           onClick={() => dispatch(handleTokenAndGovernance(true))}
         >
           Token and Governance
         </button>
         <button
-          className={classNames("MainQuestions__title  MainQuestions__title-IWantTheSameDApp", {
-            "MainQuestions__title-active": togleIWantTheSameDApp,
-          })}
+          className={classNames(
+            "MainQuestions__title  MainQuestions__title-IWantTheSameDApp",
+            {
+              "MainQuestions__title-active": togleIWantTheSameDApp,
+            }
+          )}
           onClick={() => dispatch(handleIWantTheSameDApp(true))}
         >
           I want the same DApp!
         </button>
         <button
-          className={classNames("MainQuestions__title  MainQuestions__title-Disclaimer", {
-            "MainQuestions__title-active": togleDisclaimer,
-          })}
+          className={classNames(
+            "MainQuestions__title  MainQuestions__title-Disclaimer",
+            {
+              "MainQuestions__title-active": togleDisclaimer,
+            }
+          )}
           onClick={() => dispatch(handleDisclaimer(true))}
         >
           Disclaimer
         </button>
         <button
           className="MainQuestions__buttom_up"
-          onClick={() =>  window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          })}
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            })
+          }
         >
           <img src={button_up} alt="up" />
         </button>
@@ -135,7 +152,7 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
       <div className="MainQuestions__block-inform">
         <div
           ref={togleHowItWorksRef}
-          className="MainQuestions__inform  MainQuestions__inform-block"          
+          className="MainQuestions__inform  MainQuestions__inform-block"
         >
           <h2 className="MainQuestions__inform-title">HOW IT WORKS</h2>
           <ul className="MainQuestions__inform-text">
@@ -179,19 +196,43 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
             className="MainQuestions__button MainQuestions__button-governance"
           >
             Read white paper
-          </Link>        
-         
-          <button className="MainQuestions__button">
-            Explore contract on Etherscan
-          </button>
-          <button className="MainQuestions__button">See code on GitHub</button>
+          </Link>
+
+          <Link
+            to="/Smart_Lottery_White_Paper.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="MainQuestions__button MainQuestions__button-governance"
+          >
+            Download White Paper PDF
+          </Link>
+
+          <Link
+            to="https://polygonscan.com/address/0x001201d9d2b2ebf54a2f5581670bfd3d25fcfe1d"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="MainQuestions__button MainQuestions__button-governance"
+          >
+            Explore contract on Polygonscan
+          </Link>
+
+          <Link
+            to="https://github.com/Smart-Lottery/Public/tree/master"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="MainQuestions__button MainQuestions__button-governance"
+          >
+            See code on GitHub
+          </Link>
         </div>
 
         <div
           ref={toglePayoutSructureRef}
           className="MainQuestions__inform MainQuestions__inform-block"
         >
-          <h2 className="MainQuestions__inform-title MainQuestions__inform-title-payout">Payout structure</h2>
+          <h2 className="MainQuestions__inform-title MainQuestions__inform-title-payout">
+            Payout structure
+          </h2>
           <div className="MainQuestions__desktop-hiden">
             <Payouts exchangeRate={exchangeRate} balance={balance} />
           </div>
@@ -208,8 +249,12 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
           <ul className="MainQuestions__inform-text">
             <li>
               SmartLotteryTokens (SLT): your opportunity to participate in
-              protocol governance and earn a share of the collected fees. SLT is
-              an ERC20 token with a limited supply of 1,000,000 tokens.
+              protocol governance and earn a share of the collected fees. There
+              are 10,000 SLT tokens minted at the start of the project. Only 2%
+              can be minted additionally every month. With a total supply
+              limited at 1,000,000 tokens. This allows for increase of the token
+              supply as the number of users grows and prevents from devaluation
+              of the tokens long term.
             </li>
             <li>
               As a SLT holder, you'll enjoy a share of the fees accumulated by
@@ -261,12 +306,13 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
           <h2 className="MainQuestions__inform-title">Disclaimer</h2>
           <p className="MainQuestions__inform-text">
             This website solely functions as an interface for interacting with
-            the smart contract located at the address 0x1231293y1201202317987979
-            and does not organize, facilitate, endorse, or promote any lottery,
-            gambling activity, or related services. Participation in this smart
-            contract may be deemed illegal in certain jurisdictions, and users
-            are advised to verify the legality of such activities in their
-            respective countries or territories before engaging.
+            the smart contract on Polygon chain at address
+            0x001201D9D2B2EbF54a2F5581670bfd3d25FCFe1D and does not organize,
+            facilitate, endorse, or promote any lottery, gambling activity, or
+            related services. Participation in this smart contract may be deemed
+            illegal in certain jurisdictions, and users are advised to verify
+            the legality of such activities in their respective countries or
+            territories before engaging.
           </p>
           <br></br>
           <p className="MainQuestions__inform-text">
