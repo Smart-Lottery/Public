@@ -249,7 +249,7 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
           <ul className="MainQuestions__inform-text">
             <li>
               SmartLotteryTokens (SLT): your opportunity to participate in
-              protocol governance and earn a share of the collected fees. There
+              protocol governance (in development) and earn a share of the collected fees. There
               are 10,000 SLT tokens minted at the start of the project. Only 2%
               can be minted additionally every month. With a total supply
               limited at 1,000,000 tokens. This allows for increase of the token
@@ -258,16 +258,11 @@ export const MainQuestions = ({ exchangeRate, balance }) => {
             </li>
             <li>
               As a SLT holder, you'll enjoy a share of the fees accumulated by
-              the protocol each round. Your share is calculated as 10% of the
+              the protocol each round. Your share is calculated as 15% of the
               total entry fees for that round, proportionate to your SLT
               holdings. Additionally, SLT holders can actively participate in
               the decision-making process by voting on proposed contract changes
               and approving spending requests submitted by the contract manager.
-            </li>
-            <li>
-              Not only can you trade your SLT tokens with others, but you can
-              also enjoy a competitive exchange rate of 1 SLT = 1 Matic. [this
-              number should be accessed from the contract].
             </li>
           </ul>
           <Link
